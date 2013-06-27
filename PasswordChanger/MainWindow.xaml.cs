@@ -68,7 +68,7 @@ namespace PasswordChanger
         {
             string oldPassword = fromPassword;
             string newPassword = "";
-            string passwordPrefix = "!Strib!" + DateTime.Now.ToString("MMddHH");
+            string passwordPrefix = "!PwRotate!" + DateTime.Now.ToString("MMddHH");
             byte passwordCounter = 0;
 
             try
