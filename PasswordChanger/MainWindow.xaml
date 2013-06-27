@@ -1,0 +1,36 @@
+﻿<Window x:Class="PasswordChanger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Password Changer" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Content="Username:" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <TextBox x:Name="UserName" Height="23" Margin="10" Grid.Column="1" MinWidth="300" VerticalAlignment="Top" />
+        
+        <Label Content="Existing password:" Margin="10" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="ExistingPassword" Height="23" Margin="10" Grid.Column="1" Grid.Row="1" MinWidth="300" VerticalAlignment="Top" />
+
+        <Label Content="Number of changes:" Margin="10" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <TextBox x:Name="NumberOfChanges" Height="23" Margin="10" Grid.Column="1" Grid.Row="2" MinWidth="300" VerticalAlignment="Top" Text="10" />
+
+        <Button x:Name="DoItButton" Grid.ColumnSpan="2" Content="Do it!" HorizontalAlignment="Center" Margin="10" Grid.Row="3" Width="100" VerticalAlignment="Top" Click="DoItButton_Click" />
+
+        <Label Content="Action log:" Grid.Row="4" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Top"/>
+        <TextBox x:Name="ActionLog" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" MinHeight="400" MaxHeight="600" VerticalScrollBarVisibility="Visible" Margin="5" VerticalAlignment="Top" />
+        
+
+
+    </Grid>
+</Window>
